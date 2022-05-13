@@ -1,0 +1,107 @@
+/*  Styles for lg-danaia.js */
+/*override lightGallery sytles*/
+.lg-backdrop.in {
+  opacity: 0.8; 
+}
+
+#lg-counter {
+  color: #EEE; 
+  font-size: 24px;
+  padding-top: 10px;
+  vertical-align: middle;
+  font-family: 'Philosopher', sans-serif;    
+}
+
+/************ .lg-toolbar *****************/
+.lg-toolbar{
+    background: rgba(0,0,0,0.3);
+    text-shadow: 1px 1px black;
+}
+/************ lg-sub-html *****************/
+
+.lg-hide-items .lg-sub-html {
+  opacity: 0;
+  -webkit-transform: translate3d(0, -10px, 0);
+  transform: translate3d(0, -10px, 0);
+}
+
+.lg-sub-html{
+    background: rgba(0,0,0,0.3);
+    text-shadow: 1px 1px black;
+}
+
+.lg-sub-html h2
+{
+    font-size: 20px;
+    font-family: 'Philosopher', sans-serif;
+    letter-spacing: 0.15em;
+    margin: 0px;
+    font-weight: normal;
+}
+
+.lg-sub-html p
+{
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.15em;
+    font-weight: 100;
+}
+
+
+/*new sytles*/
+#danaia-category {
+  color: #EEE; 
+  display: inline-block;
+  font-size: 24px;
+  padding-top: 10px;
+  vertical-align: middle;
+  font-family: 'Philosopher', sans-serif;
+  cursor: pointer;
+  letter-spacing: 0.15em;
+}
+
+#danaia-category br {
+    display: none;
+}
+
+#danaia-home {
+    float: left;
+}
+
+#danaia-home:after {
+  content: "\e094";
+}
+
+
+.fragment-hide {
+    display: none !important;
+}
+
+.fragment-show {
+ /*   transform: scale3d(2, 2, 2);
+    transition: transform 3s; */
+}
+.fragment-load {
+    background: url("../img/loading.gif") no-repeat scroll center center transparent;
+}
+.lg-sub-html > a {
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+.lg-sub-html > a > img {
+    margin: 1px 1px;    
+    padding: 1px 1px;
+    /*box-shadow: rgba(0,0,0,0.5) 0px 0px 50px 0px; */
+    border: 1px;
+    border-style: solid;
+    border-color:  #fff; 
+}
+
+.lg-sub-html > a > img:hover {    
+    border-color: rgba(0,0,0,0);
+}
+
+.lg-sub-html > a> img:active {    
+    border-color:rgba(0,0,0,0);    
+}

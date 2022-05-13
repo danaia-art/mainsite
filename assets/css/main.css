@@ -1,0 +1,398 @@
+@import url("http://fonts.googleapis.com/css?family=Alex+Brush&text=painter");
+/* @import url("https://fonts.googleapis.com/css?family=Marck+Script"); */
+@import url("https://fonts.googleapis.com/css?family=Bad+Script&text");
+@import url("http://fonts.googleapis.com/css?family=Philosopher&subset=cyrillic");
+@import url("/assets/css/fontello.css");
+
+/* http://vanseodesign.com/css/vertical-centering/ */
+
+body {
+    margin: 0px 0px 0px 0px;
+    background: #000000;    
+    /*user-select: none;*/
+}
+
+h1, h2, h3 {
+    margin: 0px 0px 0px 0px;
+}
+
+
+
+#pageWrapper {
+    overflow: auto;
+    position: fixed;
+    left: 0;
+    top: 0;  
+    height: 100%;    
+    width: 100%;   
+    text-align: center;    
+}
+
+
+h1 {
+            font-size: 60px;
+           /* color: #ff97e5; */ 
+            font-family: 'Bad Script', cursive;
+            color: #fff; 
+            display: block;
+            font-weight: 100 !important;            
+            margin: 0.6em 0 0.6em 1em;
+            text-shadow: 3px 3px black;
+            text-align: left;
+}
+
+.AlexBrushH1
+{
+    font-family: 'Alex Brush', cursive;
+    font-size: 86px;
+    font-weight: 100 !important;     
+}
+
+
+@media screen and (max-width: 414px) {
+    h1 {
+            font-size: 30px;
+            text-align: center;
+            margin: 0.6em 0 0.6em 0;
+    }
+
+    .AlexBrushH1
+    {
+        font-size: 44px;
+        font-weight: 100 !important;     
+    }
+}
+
+#categoryList { 
+    background-position: left, top; 
+    background-repeat: repeat; 
+    background-image: url("/assets/img/background2.png");   
+    text-align: center;    
+    padding-bottom: 3em;    
+    min-height: 85vh;    
+    display: table;
+    width: 100%;
+}
+
+#categoryList-valign
+{
+    display:table-cell;
+    vertical-align: middle;
+    text-align: center;    
+}
+
+#categoryList-centered
+{
+  display: inline-block;
+  vertical-align: top;
+  max-width: 768px;
+}
+
+.categoryItem {
+    display: inline-block;
+    padding: 2em 2em 0px 2em;  
+    border-radius: 30px;
+}
+
+.categoryImages {
+    display: block;
+    width: 150px;
+    height: 150px;
+}
+
+.categoryImages img
+{
+    box-shadow: 3px 6px 5px 1px rgba(0,0,0,0.61);
+    border-width: 0; /* important for old IE */
+}
+
+.categoryImages img:nth-of-type(2n+1) {    
+    position: absolute;
+    width: auto;
+    height: auto;
+    max-width: 150px;
+    max-height: 150px;
+    transform: rotate(0deg);                  
+    transition: transform 0.5s;
+}
+
+.categoryImages img:nth-of-type(2n) {    
+    width: auto;
+    height: auto;
+    max-width: 150px;
+    max-height: 150px;
+    transform: rotate(-10deg);
+    transition: transform 0.5s;
+}
+
+.categoryItem:hover .categoryImages img:nth-of-type(2n) {    
+    transform: rotate(-15deg) translate(-10px, 0px);    
+    transition: transform 0.5s;
+}
+
+.categoryItem:hover .categoryImages img:nth-of-type(2n+1) {    
+    transform: rotate(10deg) translate(1em, -1em);    
+    transition: transform 0.5s;
+}
+
+.categoryItem a {
+    text-decoration: none !important;
+    color: white !important;
+    outline: none !important;
+}
+
+.categoryItem h2 {
+    font-family: 'Philosopher', sans-serif;
+    font-size: 16px;
+    /*color: #f3a1bc;*/
+    color: #fff;
+    letter-spacing: 0.1em;
+    font-weight: normal;
+    text-transform: uppercase;        
+    text-shadow: 2px 2px black;
+    margin-top: 1.5em;
+    margin-left: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+#languagePanel {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+
+@media screen and (max-width: 568px) {
+    #languagePanel {
+        position: initial;
+        margin-bottom: 40px;
+    }   
+}
+
+
+.languageItem {
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none !important;
+            padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
+.languageItem-current {
+    background-color: rgba(0,0,0,0.75);
+    border-radius: 50%;    
+}
+
+
+#about {    
+    display: table;
+    background-position: center top; 
+    background-repeat: no-repeat; 
+    background-image: url("/assets/img/paints-and-brushes.jpg");
+    background-size: cover;
+    width: 100%;
+    /* increase block height proportianly to it width */
+    min-height: 65vh;
+    /*use shadows for smooth transition between backgrounds*/
+    box-shadow: inset rgba(0,0,0,0.8) 0px 50px 100px, inset rgba(255,255,255,0.8) 0px -20px 50px;    
+}
+
+#about-valign
+{
+    display:table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding: 3em 3em 3em 3em;
+
+}
+
+#about-centered
+{
+  display: inline-block;
+  vertical-align: top;
+  max-width:900px;
+}
+
+
+#about-centered > h2 {
+    font-family: 'Bad Script', cursive;
+    color: #ffffff;
+    text-shadow:rgba(0,0,0,0.8) 3px 3px 10px, rgba(0,0,0,0.8) -3px 3px 10px, rgba(0,0,0,0.8) 3px -3px 10px;     
+    font-size: 52px;
+    font-weight: normal;
+    text-align: left;
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+@media screen and (max-width: 320px) {   
+    #about-centered > h2 {
+        font-size: 48px;        
+    }
+}
+
+
+
+#avatar {
+    border-radius: 50%;    
+    margin-right: 5em;
+    float: right;        
+    box-shadow: /* rgba(0,0,0,0.5) 1px -1px 10px, */ inset rgba(255,255,255,0.9) 0 0 20px 10px;
+    background-image: url("/assets/img/av2.jpg");
+    width: 200px;
+    height: 200px;
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-size: contain;
+}
+
+@media screen and (max-width: 800px) {
+    
+    #about-valign {    
+        padding: 3em 1em 3em 1em;
+    }
+
+    #avatar {
+        display: inline-block;
+        float: none;
+        margin-right: 0;
+    }
+
+    #about-centered > h2{
+        text-align: center;
+        margin-top: 0.25em;
+        margin-left: 0;
+    }
+
+}
+
+#about-centered > article {
+    padding: 1em 1em 1em 1em;
+    background-color: rgba(0,0,0,0.6);
+    font-family: 'Philosopher', sans-serif;
+    font-size: 24px;
+    color: #f3a1bc;
+    letter-spacing: 0.1em;
+    font-weight: normal;    
+}
+
+@media screen and (max-width: 568px) {       
+    #about-centered > article {
+        font-size: 16px;
+    }
+}
+
+#about-centered > article > p {
+    text-align: left;
+    color: #ffffff;
+    margin: 0 0 0 0; 
+}
+
+
+#links {    
+    background-color: #ffffff;    
+    margin: 0 0 0 0;
+    padding: 2.5em 3em 1.5em 3em;
+    text-align: center;
+}
+
+#links > a {
+    color: #000000 !important;
+    font-family: sans-serif;    
+    font-size: 16px;
+    font-weight: 500;    
+    display: inline-block;        
+    letter-spacing: 0.06em;
+    margin-bottom: 1em;    
+    margin-left: 1em;
+    margin-right: 1em;
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+@media screen and (max-width: 414px) {
+    #links {
+            padding: 2.5em 8px 1.5em 8px;
+    }
+    
+    #links > a {
+        display: block;     
+    }
+}
+
+
+#links > a > img {
+    height: 40px;
+    width: auto;
+    border-width: 0; /* important for old IE */
+}
+
+
+.footer {
+    background-position: left, top; 
+    background-repeat: repeat; 
+    background-image: url("/assets/img/background2.png");   
+    margin: 0 0 0 0;
+    text-align: center;    
+    padding: 24px 8px 8px 8px;    
+}
+
+.footer a {
+    color: #ff97e5 !important;
+    font-family: sans-serif;    
+    font-size: 20px;
+    font-weight: 500;    
+    display: inline-block;        
+    letter-spacing: 0.06em;
+    margin-bottom: 1em;    
+    margin-left: 1em;
+    margin-right: 1em;
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+.footer a > i
+{
+    font-size: 20px;
+}
+
+/* narrow screen width */
+@media screen and (max-width: 500px) {
+    .footer{
+        text-align: left;    
+    }
+    
+    .footer a {
+        display: block;     
+        margin-left: 3em;
+        font-size: 18px;
+    }
+
+    .footer a > i
+    {
+        font-size: 18px;    
+    }
+}
+
+/* wide screen 
+@media screen and  (min-width: 1024px) and (min-height: 1100px) 
+{
+    .footer{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+} */
+
+.footer #terms
+{
+    text-align: center;
+    margin-top: 0px;
+    font-family: 'Arial';
+    font-size: 16px;
+    color: #8c769f;
+    margin-left:  8px;
+    margin-right: 8px;    
+    letter-spacing: 0.02em;
+}
+
+
