@@ -2513,7 +2513,7 @@ pictures.list =
       "Description": "Холст, акрил 80x100 2018 г.",
       "PriceRUB": "90000 руб.",
       "en": {"Title": "Lake", "Description": "Acrylic on canvas 80x100 2018"},
-      "Categories": ["abstract", "stillife", "2018"],
+      "Categories": ["abstract", "landscape", "2018"],
       "CloudinaryImages": ["/v1652260243/published/ayycxnb1kcdqdbukcodr.jpg"]
     }, {
       "Page": "153",
@@ -2666,7 +2666,7 @@ pictures.list =
         "Description": "Холст, масло 80x100 2022 г.",
         "PriceRUB": "90000 руб.",
         "en": {"Title": "Миндаль цветет", "Description": "Oil on canvas 80x100 2022"},
-        "Categories": ["stillife", "2022"],
+        "Categories": ["landscape", "2022"],
         "CloudinaryImages": ["/v1652534593/published/puaszc7lbswji9ikkfzj.jpg"]
       }, {
       "Page": "170",
@@ -2682,7 +2682,7 @@ pictures.list =
       "Description": "Холст, масло 50x50 2018 г.",
       "PriceRUB": "90000 руб.",
       "en": {"Title": "Тишина", "Description": "Oil on canvas 50x50 2018"},
-      "Categories": ["stillife", "2018"],
+      "Categories": ["landscape", "2018"],
       "CloudinaryImages": ["/v1652534592/published/rcp58aalzk5jqvktbkna.jpg"]
     }, {
       "Page": "167",
@@ -2698,7 +2698,7 @@ pictures.list =
       "Description": "Холст, масло 100x120 2021 г.",
       "PriceRUB": "90000 руб.",
       "en": {"Title": "В прохладе гор", "Description": "Oil on canvas 100x120 2021"},
-      "Categories": ["stillife", "2021"],
+      "Categories": ["landscape", "2021"],
       "CloudinaryImages": ["/v1652534592/published/mad4pxpe0sdbzkldg3yk.jpg", "/v1652534583/published/p4bqktbpbg5a280bcych.webp", "/v1652534582/published/nmrtrbxksz845r1uqcz7.webp", "/v1652534582/published/eyr3yoa4fpvxmdstylbz.webp", "/v1652534583/published/zc0yowvplireyrlhdtpo.webp", "/v1652534590/published/q356k20rvkmftj6s1rsz.jpg"]
     }, {
       "Page": "165",
@@ -2730,7 +2730,7 @@ pictures.list =
       "Description": "Холст, масло 120x80 2021 г.",
       "PriceRUB": "90000 руб.",
       "en": {"Title": "Meditation", "Description": "Oil on canvas 120x80 2021"},
-      "Categories": ["stillife", "2021"],
+      "Categories": ["landscape", "2021"],
       "CloudinaryImages": ["/v1652534590/published/pcdviby6os9q63lhhk5l.jpg"]
     }, {
       "Page": "164",
@@ -2758,11 +2758,11 @@ pictures.list =
       "CloudinaryImages": ["/v1652534587/published/jcgutdw8v3jyawwhdyxb.jpg"]
     }, {
       "Page": "156",
-      "Title": "День на Земле.Холст",
+      "Title": "День на Земле",
       "Description": "Холст, акрил 80x120 2019 г.",
       "PriceRUB": "90000 руб.",
       "en": {"Title": "The Day On Earth", "Description": "Acrylic on canvas 80x120 2019"},
-      "Categories": ["stillife", "2019"],
+      "Categories": ["landscape", "2019"],
       "CloudinaryImages": ["/v1652534587/published/aoctami1uobnuqhgnlgv.jpg"]
     }, {
       "Page": "163",
@@ -2778,7 +2778,7 @@ pictures.list =
       "Description": "Холст, масло 60 см 2019 г.",
       "PriceRUB": "90000 руб.",
       "en": {"Title": "Зимний пруд", "Description": "Oil on canvas, 60 cm, 2019"},
-      "Categories": ["stillife", "2019"],
+      "Categories": ["landscape", "2019"],
       "CloudinaryImages": ["/v1652534586/published/vp9rggcemicjks5tvmdy.jpg"]
     }, {
       "Page": "155",
