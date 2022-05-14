@@ -4,7 +4,7 @@ var galleryApp = (function(){
 
     var byId = [], byCategory = [];
 
-    var cloudinaryPfx ="http://res.cloudinary.com/danaia-art/image/upload/";
+    var cloudinaryPfx ="https://res.cloudinary.com/danaia-art/image/upload/";
 
     function CloudinaryFit(image, limit)
     {
