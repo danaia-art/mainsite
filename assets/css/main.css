@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Alex+Brush&text=painter");
-/* @import url("https://fonts.googleapis.com/css?family=Marck+Script"); */
 @import url("https://fonts.googleapis.com/css?family=Bad+Script&text");
 @import url("https://fonts.googleapis.com/css?family=Philosopher&subset=cyrillic");
-@import url("./fontello.css");
+@import url("/assets/css/fontello.css");
 
 /* http://vanseodesign.com/css/vertical-centering/ */
 
@@ -66,7 +65,7 @@ h1 {
 #categoryList { 
     background-position: left, top; 
     background-repeat: repeat;
-    background-image: url("../img/background2.png");
+    background-image: url("/assets/img/background2.png");
     text-align: center;    
     padding-bottom: 3em;    
     min-height: 85vh;    
@@ -187,7 +186,7 @@ h1 {
     display: table;
     background-position: center top; 
     background-repeat: no-repeat; 
-    background-image: url("../img/paints-and-brushes.jpg");
+    background-image: url("/assets/img/paints-and-brushes.jpg");
     background-size: cover;
     width: 100%;
     /* increase block height proportianly to it width */
@@ -237,7 +236,7 @@ h1 {
     margin-right: 5em;
     float: right;        
     box-shadow: /* rgba(0,0,0,0.5) 1px -1px 10px, */ inset rgba(255,255,255,0.9) 0 0 20px 10px;
-    background-image: url("../img/av2.jpg");
+    background-image: url("/assets/img/av2.jpg");
     width: 200px;
     height: 200px;
     background-position: center center; 
@@ -330,7 +329,7 @@ h1 {
 .footer {
     background-position: left, top; 
     background-repeat: repeat; 
-    background-image: url("../img/background2.png");
+    background-image: url("/assets/img/background2.png");
     margin: 0 0 0 0;
     text-align: center;    
     padding: 24px 8px 8px 8px;    
