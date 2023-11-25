@@ -43,6 +43,15 @@
     <link rel="stylesheet" href="/assets/css/lg-danaia.css">
     <link rel="stylesheet" href="/assets/css/main.css">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38070100-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-38070100-1');
+    </script>
+
 </head>
 <body ondragstart="return false;" ondrop="return false;">
     <script src="/assets/js/pictures.js"></script>
@@ -229,17 +238,6 @@
             }
         );
         galleryApp.init();                  
-    </script>   
-
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-38070100-1', 'danaia-art.com');
-        ga('send', 'pageview',location.pathname+location.search+location.hash);
     </script>
- 
 </body>
 </html>
