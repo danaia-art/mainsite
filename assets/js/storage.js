@@ -1,39 +1,59 @@
 //https://docs.github.com/en/rest/git/trees?apiVersion=2022-11-28#create-a-tree
+//https://www.freecodecamp.org/news/pushing-a-list-of-files-to-the-github-with-javascript-b724c8c09b66/
 
-var repo = null
-function test() {
-  console.log("test")
-  const gitHub = new GitHub({ token:"<TOKEN>"})
-  repo = gitHub.getRepo("danaia-art/mainsite")
-  repo.getTree("main").then( mainTree => {
-    console.log(mainTree)
-    console.log(mainTree.sha)
-    const file = mainTree.data.tree.find(obj => obj.path == "index.html")
-    console.log(file.sha)
-    return file.sha
-  }).then(templateSha => repo.getBlob(templateSha)
-  ) .then(blob => {
-    console.log(blob)
-    return blob.data
-  }).then (blobData => repo.createBlob(blobData))
-  .then(newBlob => {
-    return newBlob.data.sha
-  }).then( fileSha =>
+const storage = (function () {
+  const repoPath = "danaia-art/mainsite"
+  const picturesJson = "pictures.json"
+  let repo = null
 
-      repo.createTree([ { "path": "test.txt", "mode": "100644", "type": "blob", "sha": "BLOB_SHA"} ],
-          /*base tree sha*/"d89907a7ec227e27f8ccbd3fb22fce6f2bb4de6d")
+  function init(token) {
+    const gitHub = new GitHub({ token: token})
+    repo = gitHub.getRepo(repoPath)
+  }
 
-      //!!!or content instead of blob
-  ).then( tree => {
-    tree.data.sha //tree sha
-    repo.getRef("heads/main")
-    //then  data.object.sha //current commit sha
-    //return tree.sha and commit.sha
-  }).then(
-  return repo.commit(/*tree.sha*/"d89907a7ec227e27f8ccbd3fb22fce6f2bb4de6d",/*new commit sha*/"f93f0f9017af6eea5ae5a9ed6d2acaae02c50fee", "test message")
-).then( response => {
-    return repo.updateHead("heads/main",response.data.sha)
-  }).then(response => {
-    if (response.status == 200) OK!!
-  }).catch(ex => console.log(ex))
+  function getPictureList() {
+    return repo.getTree("main")
+        .then(tree => {
+          const picturesJsonFile = tree.data.tree.find(file => file.path === picturesJson)
+          return repo.getBlob(picturesJsonFile.sha)
+              .then(blob => {
+                return { treeSha: tree.data.sha, list: blob.data}
+              })
+        })
+  }
+
+  function updatePictureList(list) {
+    const json = JSON.stringify(list.list, null, 4)
+    return repo.createBlob(json)
+        .then(response => {
+          return repo.createTree(
+              [ { "path": picturesJson, "mode": "100644", "type": "blob", "sha": response.data.sha} ],
+              list.treeSha
+          )
+        }).then(tree => {
+          return repo.getRef("heads/main").then (response => {
+            return { treeSha: tree.data.sha, commitSha: response.data.object.sha }
+          })
+        }).then( newTreeAndPreviousCommit => {
+          return repo.commit(
+              newTreeAndPreviousCommit.treeSha,
+              newTreeAndPreviousCommit.commitSha,
+              "updatePictureList"
+          )
+        }).then( response => repo.updateHead("heads/main",response.data.sha)
+         .then(response => {
+           if (response.status !== 200) {
+             console.error(response)
+             throw Error(`Updatehead response status ${response.status}. See log for details.`)
+           }
+         })
+    )
+  }
+
+  return {
+    init: init,
+    getPictureList: getPictureList,
+    updatePictureList: updatePictureList
+  }
 }
+)();

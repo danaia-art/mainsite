@@ -1,11 +1,72 @@
 <!DOCTYPE html><html lang="ru"><head>
   <meta charset="utf-8">
   <title data-lang="ru">Наталья Певзнер</title>
+  <link rel="stylesheet" href="assets/css/admin.css">
 </head>
 <body ondragstart="return false;" ondrop="return false;">
-<script src="https://unpkg.com/github-api/dist/GitHub.bundle.min.js"></script>
+<!-- script src="https://unpkg.com/github-api/dist/GitHub.bundle.min.js"></script-->
+<script src="assets/js/GitHub.bundle.min.js"></script>
 <script src="assets/js/storage.js"></script>
+<script src="assets/js/admin.js"></script>
 
-<button onclick="test()">Test</button>
+<div id="topPanel" style="display: none">
+  <button id = "newPictureButton" type="button" onclick="adminApp.newPictureClick()">New</button>
+  <button id = "logoutButton" type="button" onclick="adminApp.logoutClick()">Logout</button>
+</div>
+<form id="tokensForm" style="display: none">
+  <div>
+    <label for="repoTokenInput">Repo Token</label>
+    <input type="text" id="repoTokenInput">
+  </div>
+  <div>
+  <label for="cloudinaryTokenInput">Cloudinary Token</label>
+  <input type="text" id="cloudinaryTokenInput">
+  </div>
+  <div>
+    <button onclick="adminApp.submitTokensForm()" type="button">OK</button>
+  </div>
+</form>
+
+<form id="pictureForm" style="display: none">
+  <fieldset id="pictureFormFieldset">
+  <input type="hidden" id="pictureId">
+  <div>
+    <label for="titleInput">Название</label>
+    <input type="text" id="titleInput">
+  </div>
+  <div>
+    <label for="descriptionInput">Описание</label>
+    <input type="text" id="descriptionInput">
+  </div>
+  <div>
+    <label for="titleInputEN">Название EN</label>
+    <input type="text" id="titleInputEN">
+  </div>
+  <div>
+    <label for="descriptionInputEN">Описание EN</label>
+    <input type="text" id="descriptionInputEN">
+  </div>
+  <div>
+    <label for="categoriesInput">Разделы</label>
+    <input type="text" id="categoriesInput">
+  </div>
+  <div>
+    <input type="file" id="fileInput" accept="image/*">
+  </div>
+  <div>
+    <button onclick="adminApp.submitPictureForm()" type="button">OK</button>
+  </div>
+  </fieldset>
+</form>
+
+<div id="errorForm" style="display: none">
+  <div id="errorCaption"></div>
+  <div id="errorText"></div>
+  <button onclick="adminApp.errorClick()" type="button">OK</button>
+</div>
+
+<script type="text/javascript">
+  adminApp.init()
+</script>
 </body>
 <html>

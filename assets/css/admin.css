@@ -1,0 +1,12 @@
+
+#errorCaption {
+    color: lightcoral;
+    background: #400707;
+    border: #202020;
+}
+
+#errorText {
+    background: #999999;
+    font-family: sans-serif;
+    border: #202020;
+}
