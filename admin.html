@@ -10,6 +10,8 @@
 <script src="assets/js/admin.js"></script>
 
 <div id="topPanel" style="display: none">
+  <button id = "prevButton" type="button" onclick="adminApp.nextPictureClick(-1)">&lt;</button>
+  <button id = "nextButton" type="button" onclick="adminApp.nextPictureClick(1)">&gt;</button>
   <button id = "newPictureButton" type="button" onclick="adminApp.newPictureClick()">New</button>
   <button id = "logoutButton" type="button" onclick="adminApp.logoutClick()">Logout</button>
 </div>
@@ -29,29 +31,32 @@
 
 <form id="pictureForm" style="display: none">
   <fieldset id="pictureFormFieldset">
-  <input type="hidden" id="pictureId">
+  <input type="text" id="pictureIdInput" readonly>
   <div>
     <label for="titleInput">Название</label>
-    <input type="text" id="titleInput">
+    <input type="text" id="titleInput" class="inputField">
   </div>
   <div>
     <label for="descriptionInput">Описание</label>
-    <input type="text" id="descriptionInput">
+    <input type="text" id="descriptionInput" class="inputField">
   </div>
   <div>
     <label for="titleInputEN">Название EN</label>
-    <input type="text" id="titleInputEN">
+    <input type="text" id="titleInputEN" class="inputField">
   </div>
   <div>
     <label for="descriptionInputEN">Описание EN</label>
-    <input type="text" id="descriptionInputEN">
+    <input type="text" id="descriptionInputEN" class="inputField">
   </div>
   <div>
     <label for="categoriesInput">Разделы</label>
-    <input type="text" id="categoriesInput">
+    <input type="text" id="categoriesInput" class="inputField">
   </div>
   <div>
-    <input type="file" id="fileInput" accept="image/*">
+    <input type="file" id="fileInput" accept="image/*" onchange="adminApp.fileChanged()">
+  </div>
+  <div>
+    <img id="previewImage" src="">
   </div>
   <div>
     <button onclick="adminApp.submitPictureForm()" type="button">OK</button>

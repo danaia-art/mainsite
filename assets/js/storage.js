@@ -4,6 +4,8 @@
 const storage = (function () {
   const repoPath = "danaia-art/mainsite"
   const picturesJson = "pictures.json"
+  const indexHtmlTemplate = "___index.html"
+
   let repo = null
 
   function init(token) {
@@ -22,13 +24,35 @@ const storage = (function () {
         })
   }
 
-  function updatePictureList(list) {
-    const json = JSON.stringify(list.list, null, 4)
-    return repo.createBlob(json)
-        .then(response => {
+  function getTemplatePage() {
+    return repo.getTree("main")
+        .then(tree => {
+          const picturesJsonFile = tree.data.tree.find(file => file.path === indexHtmlTemplate)
+          return repo.getBlob(picturesJsonFile.sha)
+              .then(blob => blob.data)
+        })
+  }
+
+
+  function updateFiles(treeSha, list) {
+    const promises = list.map(file =>
+      repo.createBlob(file.content).then(response => {
+        file.sha = response.data.sha
+        return file
+      })
+    )
+    Promise.all(promises)
+        .then(files => {
+          const treeItems = files.map(file => {
+            return { path: file.path,
+              mode: "100644",
+                type: "blob",
+                sha: file.sha
+            }
+          })
           return repo.createTree(
-              [ { "path": picturesJson, "mode": "100644", "type": "blob", "sha": response.data.sha} ],
-              list.treeSha
+              treeItems,
+              treeSha
           )
         }).then(tree => {
           return repo.getRef("heads/main").then (response => {
@@ -36,24 +60,28 @@ const storage = (function () {
           })
         }).then( newTreeAndPreviousCommit => {
           return repo.commit(
-              newTreeAndPreviousCommit.treeSha,
               newTreeAndPreviousCommit.commitSha,
-              "updatePictureList"
+              newTreeAndPreviousCommit.treeSha,
+              "from admin"
           )
-        }).then( response => repo.updateHead("heads/main",response.data.sha)
-         .then(response => {
+        }).then( response =>  {
+          return repo.updateHead("heads/main",response.data.sha)
+        }).then(response => {
            if (response.status !== 200) {
              console.error(response)
              throw Error(`Updatehead response status ${response.status}. See log for details.`)
+           } else {
+             console.info(response.data)
            }
-         })
-    )
+        })
   }
 
   return {
     init: init,
     getPictureList: getPictureList,
-    updatePictureList: updatePictureList
+    updateFiles: updateFiles,
+    getTemplatePage: getTemplatePage,
+    picturesJson: picturesJson
   }
 }
 )();
