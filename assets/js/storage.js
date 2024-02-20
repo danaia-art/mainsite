@@ -36,10 +36,11 @@ const storage = (function () {
 
   function updateFiles(treeSha, list) {
     const promises = list.map(file =>
-      repo.createBlob(file.content).then(response => {
-        file.sha = response.data.sha
-        return file
-      })
+      // repo.createBlob(file.content).then(response => {
+      //   file.sha = response.data.sha
+      //   return file
+      // })
+        Promise.resolve(file)
     )
     Promise.all(promises)
         .then(files => {
@@ -47,7 +48,8 @@ const storage = (function () {
             return { path: file.path,
               mode: "100644",
                 type: "blob",
-                sha: file.sha
+                //sha: file.sha
+                 content: file.content
             }
           })
           return repo.createTree(

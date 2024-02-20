@@ -230,7 +230,7 @@ const adminApp = (function(){
         }).then (pictureFiles => {
           const picturesJson = {
             path: storage.picturesJson,
-            content:  pictures.list//JSON.stringify(pictures.list, null, 4)
+            content:  JSON.stringify(pictures.list, null, 4)
           }
           const otherFiles = [ generateSitemap() , picturesJson ]
           const allFiles = pictureFiles.concat(otherFiles)
