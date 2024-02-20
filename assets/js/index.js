@@ -228,7 +228,7 @@ var galleryApp = (function(){
 
         init: function () {
             const lang = requestedLanguage();
-            fetch("pictures.json", {method: "GET"})
+            fetch("/pictures.json", {method: "GET"})
                 .then(response => response.json())
                 .then(list => {
                     list.forEach(item => initPicture(lang, item))

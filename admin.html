@@ -13,6 +13,7 @@
   <button id = "prevButton" type="button" onclick="adminApp.nextPictureClick(-1)">&lt;</button>
   <button id = "nextButton" type="button" onclick="adminApp.nextPictureClick(1)">&gt;</button>
   <button id = "newPictureButton" type="button" onclick="adminApp.newPictureClick()">New</button>
+  <button id = "updateAllButton" type="button" onclick="adminApp.updateAllClick()">Update All</button>
   <button id = "logoutButton" type="button" onclick="adminApp.logoutClick()">Logout</button>
 </div>
 <form id="tokensForm" style="display: none">
@@ -59,7 +60,7 @@
     <img id="previewImage" src="">
   </div>
   <div>
-    <button onclick="adminApp.submitPictureForm()" type="button">OK</button>
+    <button onclick="adminApp.submitPictureForm()" type="button">Save</button>
   </div>
   </fieldset>
 </form>

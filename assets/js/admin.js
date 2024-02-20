@@ -292,10 +292,12 @@ const adminApp = (function(){
         pictureWithImage = Object.assign(pictures.list[currentPicture], pictureWithImage)
       }
       return generateFiles([pictureWithImage])
-    }).then ( files =>
-      storage.updateFiles(pictures.treeSha, files)
-    ).then( _ => showCurrentPicture())
-    .catch(error => handleError(error))
+    }).then ( files => {
+      return storage.updateFiles(pictures.treeSha, files)
+    }).then( result => {
+      result.object.sha
+      showCurrentPicture()
+    }).catch(error => handleError(error))
   }
 
   function errorClick() {
@@ -306,6 +308,22 @@ const adminApp = (function(){
     document.getElementById("previewImage").src = ""
   }
 
+  function updateAllClick() {
+    const pictureFormFieldset = document.getElementById("pictureFormFieldset")
+    pictureFormFieldset.disabled = true
+
+    storage.getTemplatePage()
+        .then(template => {
+          return languages.map(language => generateMainPage(template, language))
+        }).then ( mainPageFiles => {
+          return generateFiles(pictures.list).then(pictureFiles => {
+              const allFiles = mainPageFiles.concat(pictureFiles)
+              return storage.updateFiles(pictures.treeSha, allFiles)
+            })
+        }).then(_ => {
+          showCurrentPicture()
+        }).catch(error => handleError(error))
+  }
   return {
     init: init,
     submitTokensForm: submitTokensForm,
@@ -314,6 +332,7 @@ const adminApp = (function(){
     submitPictureForm: submitPictureForm,
     errorClick: errorClick,
     nextPictureClick: nextPictureClick,
-    fileChanged: fileChanged
+    fileChanged: fileChanged,
+    updateAllClick: updateAllClick
   }
 })();

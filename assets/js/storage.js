@@ -36,18 +36,20 @@ const storage = (function () {
 
   function updateFiles(treeSha, list) {
     const promises = list.map(file =>
+      //it is better to create each blob one by one. But there is an issue with encoding. Russian text becomes broken
       // repo.createBlob(file.content).then(response => {
       //   file.sha = response.data.sha
       //   return file
       // })
         Promise.resolve(file)
     )
-    Promise.all(promises)
+    return Promise.all(promises)
         .then(files => {
           const treeItems = files.map(file => {
             return { path: file.path,
               mode: "100644",
                 type: "blob",
+                //it is better to pass blob sha. But there is an issue with encoding. Russian text becomes broken
                 //sha: file.sha
                  content: file.content
             }
@@ -73,7 +75,7 @@ const storage = (function () {
              console.error(response)
              throw Error(`Updatehead response status ${response.status}. See log for details.`)
            } else {
-             console.info(response.data)
+             return response.data
            }
         })
   }
