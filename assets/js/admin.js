@@ -133,7 +133,7 @@ const adminApp = (function(){
     //document.getElementById("descriptionInputEN").value = ""
     document.getElementById("fileInput").value = ""
     const categoriesInput = document.getElementById("categoriesInput")
-    if (categoriesInput.value === "") categoriesInput.value = (new Date()).getFullYear()
+    if (categoriesInput.value == "") categoriesInput.value = (new Date()).getFullYear()
     document.getElementById("pictureFormFieldset").disabled = false
     document.getElementById("previewImage").src = ""
     document.getElementById("pictureForm").style.display = "block"
@@ -239,7 +239,7 @@ const adminApp = (function(){
   }
 
   function lastPictureId() {
-    return pictures.list.map(p => picture.Page).max()
+    return pictures.list.map(p => p.Page).max()
   }
 
   function submitPictureForm() {
@@ -295,7 +295,7 @@ const adminApp = (function(){
     }).then ( files => {
       return storage.updateFiles(pictures.treeSha, files)
     }).then( result => {
-      result.object.sha
+      //result.object.sha
       showCurrentPicture()
     }).catch(error => handleError(error))
   }
