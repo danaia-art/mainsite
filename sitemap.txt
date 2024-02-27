@@ -169,6 +169,7 @@ https://danaia-art.com/pictures/163.html
 https://danaia-art.com/pictures/158.html
 https://danaia-art.com/pictures/155.html
 https://danaia-art.com/pictures/171.html
+https://danaia-art.com/pictures/172.html
 https://danaia-art.com/en/pictures/124.html
 https://danaia-art.com/en/pictures/122.html
 https://danaia-art.com/en/pictures/123.html
@@ -340,5 +341,6 @@ https://danaia-art.com/en/pictures/163.html
 https://danaia-art.com/en/pictures/158.html
 https://danaia-art.com/en/pictures/155.html
 https://danaia-art.com/en/pictures/171.html
+https://danaia-art.com/en/pictures/172.html
 https://danaia-art.com/index.html
 https://danaia-art.com/en/index.html
