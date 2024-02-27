@@ -3228,5 +3228,22 @@
         "CloudinaryImages": [
             "/v1709041473/published/kqheeu0kqx6ujpnacpi9.jpg"
         ]
+    },
+    {
+        "Page": "172",
+        "Title": "Полетим над городом",
+        "Description": "Оргстекло/акрил, 100 см x 75см 2022 г",
+        "Categories": [
+            "2022",
+            "cityscape",
+            "plexiglass"
+        ],
+        "en": {
+            "Title": "Fly Over the City",
+            "Description": "Acrylic on plexiglass 100x75 2022"
+        },
+        "CloudinaryImages": [
+            "/v1709042298/published/e0oodslqyehwdpzms1yg.jpg"
+        ]
     }
 ]
