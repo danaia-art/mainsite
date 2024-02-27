@@ -43,7 +43,7 @@ const adminApp = (function(){
     formData.append("upload_preset", cloudinaryToken)
     return fetch(cloudinaryUrl, { method: "POST", body: formData})
         .then (response => response.json())
-        .then (result => result.secure_url.slice(cloudinaryPrefix.length))
+        .then (result => result.secure_url.slice(cloudinaryPrefix.length - 1))
   }
 
   function initPicturesList() {
@@ -239,7 +239,7 @@ const adminApp = (function(){
   }
 
   function lastPictureId() {
-    return pictures.list.map(p => p.Page).max()
+    return pictures.list.map(p => parseInt(p.Page)).reduce((a,b) => Math.max(a,b), -Infinity)
   }
 
   function submitPictureForm() {
