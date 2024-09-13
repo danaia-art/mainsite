@@ -3280,5 +3280,22 @@
         "CloudinaryImages": [
             "/v1726249453/published/f9l7ivenmj4azbfnc6th.jpg"
         ]
+    },
+    {
+        "Page": "175",
+        "Title": "Некоторые размышления в середине лета",
+        "Description": "Оргстекло/акрил, 150 см x 100см 2022 г",
+        "Categories": [
+            "2022",
+            "cityscape",
+            "plexiglass"
+        ],
+        "en": {
+            "Title": "Some reflections in the middle of summer",
+            "Description": "Acrylic on plexiglass 150x100 2022"
+        },
+        "CloudinaryImages": [
+            "/v1726250085/published/pxsfg8rhmrxtg9jdiepw.jpg"
+        ]
     }
 ]
