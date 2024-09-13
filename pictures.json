@@ -3245,5 +3245,22 @@
         "CloudinaryImages": [
             "/v1709042298/published/e0oodslqyehwdpzms1yg.jpg"
         ]
+    },
+    {
+        "Page": "173",
+        "Title": "Melancolique Valse",
+        "Description": "Оргстекло/акрил, 100 см x 75см 2022 г",
+        "Categories": [
+            "2022",
+            "cityscape",
+            "plexiglass"
+        ],
+        "en": {
+            "Title": "Melancolique Valse",
+            "Description": "Acrylic on plexiglass 100x75 2022"
+        },
+        "CloudinaryImages": [
+            "/v1726249100/published/buttbp80lw3obzpkiftp.jpg"
+        ]
     }
 ]
