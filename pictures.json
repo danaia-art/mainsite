@@ -3262,5 +3262,23 @@
         "CloudinaryImages": [
             "/v1726249100/published/buttbp80lw3obzpkiftp.jpg"
         ]
+    },
+    {
+        "Page": "174",
+        "Title": "Ponte Vekkhio",
+        "Description": "Оргстекло/акрил, 100 см x 150 см 2022 г",
+        "Categories": [
+            "2022",
+            "cityscape",
+            "plexiglass",
+            "italy"
+        ],
+        "en": {
+            "Title": "Ponte Vekkhio",
+            "Description": "Acrylic on plexiglass 100x150 2022"
+        },
+        "CloudinaryImages": [
+            "/v1726249453/published/f9l7ivenmj4azbfnc6th.jpg"
+        ]
     }
 ]
