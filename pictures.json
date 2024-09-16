@@ -3462,5 +3462,23 @@
         "CloudinaryImages": [
             "/v1726513824/published/vtooifsczendwuxqolbj.jpg"
         ]
+    },
+    {
+        "Page": "185",
+        "Title": "Все лето в один день",
+        "Description": "Оргстекло/акрил, 100 см x 150см 2024 г",
+        "Categories": [
+            "2024",
+            "cityscape",
+            "plexiglass",
+            "abstract"
+        ],
+        "en": {
+            "Title": "All summer in a day",
+            "Description": "Acrylic on plexiglass 100x150 2024"
+        },
+        "CloudinaryImages": [
+            "/v1726514252/published/yzpue9cyyt72m7i0h1rt.jpg"
+        ]
     }
 ]
