@@ -3388,5 +3388,23 @@
         "CloudinaryImages": [
             "/v1726511972/published/nhknpxcw7fgtca6dtcg5.jpg"
         ]
+    },
+    {
+        "Page": "181",
+        "Title": "Воздух Весны",
+        "Description": "Оргстекло/акрил, 150 см x 100 см 2022 г",
+        "Categories": [
+            "2022",
+            "stillife",
+            "plexiglass",
+            "flowers"
+        ],
+        "en": {
+            "Title": "Spring air",
+            "Description": "Acrylic on plexiglass 150x100 2022"
+        },
+        "CloudinaryImages": [
+            "/v1726512416/published/cryiapggmbfolhkrmnuk.jpg"
+        ]
     }
 ]
