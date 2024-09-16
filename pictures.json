@@ -3486,5 +3486,22 @@
         "CloudinaryImages": [
             "/v1726514252/published/yzpue9cyyt72m7i0h1rt.jpg"
         ]
+    },
+    {
+        "Page": "186",
+        "Title": "Восход",
+        "Description": "Холст/масло, 70x60 2024 г.",
+        "Categories": [
+            "cityscape",
+            "2024",
+            "abstract"
+        ],
+        "en": {
+            "Title": "Rise",
+            "Description": "Oil on canvas 70x60 2024"
+        },
+        "CloudinaryImages": [
+            "/v1726515503/published/aly3gtnurtqdkxbzlnhb.jpg"
+        ]
     }
 ]
