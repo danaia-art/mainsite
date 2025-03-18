@@ -574,10 +574,9 @@
         "PriceRUB": "90000 руб.",
         "en": {
             "Title": "English title",
-            "Description": " English description"
+            "Description": "English description"
         },
         "Categories": [
-            "stillife",
             "2016"
         ],
         "CloudinaryImages": [
